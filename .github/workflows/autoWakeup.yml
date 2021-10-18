@@ -29,6 +29,7 @@ jobs:
       run: |
         pip install requests
         pip install telepot
+        pip install --upgrade certifi
     - name: Waking  #读取站点信息
       env: 
         $CONFIG_SITE: ${{ secrets.Site }} # 读取评论后台地址
