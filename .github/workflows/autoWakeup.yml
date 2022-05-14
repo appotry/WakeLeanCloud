@@ -35,6 +35,7 @@ jobs:
         $CONFIG_SITE: ${{ secrets.Site }} # 读取评论后台地址
       run: | 
         python run.py ${{ secrets.Site }} ${{ secrets.TELEBOT_TOKEN }} ${{ secrets.CHAT_ID }}
+        python run.py https://onebox.17lai.site/
         echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.log
     - name: Commit #更新日志到GitHub仓库
       run: |
